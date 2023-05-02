@@ -2,8 +2,7 @@
 const returnRandBase = () => {
     const dnaBases = ['A', 'T', 'C', 'G']
     return dnaBases[Math.floor(Math.random() * 4)] 
-  }
-  
+}
   // console.log(returnRandBase())
   
   // Returns a random single strand of DNA containing 15 bases
@@ -56,14 +55,14 @@ const pAequorFactory = (no,dna)=>{
       
     },
     complementStrand(){
-      let complementDna= [];
-      this.dna.forEach(base =>{
-        base === 'A' ? complementDna.push('T') : false;
-        base === 'T' ? complementDna.push('A') : false;
-        base === 'C' ? complementDna.push('G') : false;
-        base === 'G' ? complementDna.push('C') : false;
+      const complementedDna= [];
+      this.dna.forEach(item =>{
+        item === 'A' ? complementedDna.push('T') : false;
+        item === 'T' ? complementedDna.push('A') : false;
+        item === 'C' ? complementedDna.push('G') : false;
+        item === 'G' ? complementedDna.push('C') : false;
       });
-      return complementDna;
+      return complementedDna;
     }
   };
 
